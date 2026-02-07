@@ -1,8 +1,133 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- HERO SECTION -->
+<section class="p-4 p-md-5 mb-4 rounded-3 border bg-light">
+    <div class="container-fluid py-2">
+        <h1 class="display-6 fw-bold mb-2">Welcome to My Basketball Hobby</h1>
+        <p class="lead mb-3">
+            Basketball is more than a sport to me — it’s a way to build discipline, teamwork, and confidence.
+        </p>
+
+        <div class="d-flex flex-wrap gap-2">
+            <span class="badge text-bg-dark">Skill</span>
+            <span class="badge text-bg-secondary">Teamwork</span>
+            <span class="badge text-bg-primary">Strategy</span>
+            <span class="badge text-bg-success">Consistency</span>
+        </div>
+
+        <div class="mt-4">
+            <a class="btn btn-success me-2" asp-controller="Home" asp-action="Calculator">
+                Estimate Tutoring Cost
+            </a>
+            <a class="btn btn-outline-secondary" href="#gallery">
+                See Photos
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTENT GRID -->
+<section class="row g-4">
+    <!-- ABOUT -->
+    <div class="col-12 col-lg-7">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h2 class="h4 fw-bold mb-3">Why I Love Basketball</h2>
+
+                <p>
+                    Basketball is my favorite hobby because it combines physical skill, strategy, and teamwork.
+                    I started playing in high school and continue to enjoy improving my technique.
+                </p>
+
+                <p>
+                    Playing basketball has helped me learn communication, leadership, and discipline.
+                    I enjoy both practicing on my own and playing with friends.
+                </p>
+
+                <p class="mb-0">
+                    If you would like help learning the basics—shooting form, footwork, or ball handling—you can estimate
+                    tutoring costs using the calculator page.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUICK FACTS / HIGHLIGHTS -->
+    <div class="col-12 col-lg-5">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h2 class="h4 fw-bold mb-3">What I Focus On</h2>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>Shooting:</strong> form, balance, and repeatable release
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Ball Handling:</strong> control, change of pace, and protection
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Defense:</strong> stance, positioning, and communication
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Game IQ:</strong> spacing, decision-making, and simple reads
+                    </li>
+                </ul>
+
+                <div class="alert alert-info mt-3 mb-0">
+                    Tip: Small habits (10–15 minutes daily) beat one long practice once a week.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- IMAGE GALLERY -->
+<section id="gallery" class="mt-5">
+    <div class="d-flex align-items-end justify-content-between mb-3">
+        <h2 class="h4 fw-bold mb-0">Photo Gallery</h2>
+        <span class="text-muted small">Two moments that inspire me</span>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-12 col-md-6">
+            <div class="card shadow-sm">
+                <img src="~/images/laker2.webp" class="img-fluid rounded-top" alt="Basketball image 1" />
+                <div class="card-body">
+                    <h3 class="h6 fw-bold mb-1">Confidence & Rhythm</h3>
+                    <p class="text-muted mb-0">
+                        Staying calm and consistent helps every shot feel repeatable.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="card shadow-sm">
+                <img src="~/images/lakers1.avif" class="img-fluid rounded-top" alt="Basketball image 2" />
+                <div class="card-body">
+                    <h3 class="h6 fw-bold mb-1">Teamwork & Reads</h3>
+                    <p class="text-muted mb-0">
+                        Basketball is about timing, spacing, and trusting teammates.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="mt-5 p-4 rounded-3 border bg-white shadow-sm">
+    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+        <div>
+            <h2 class="h5 fw-bold mb-1">Want help improving faster?</h2>
+            <p class="text-muted mb-0">
+                Use the calculator to estimate tutoring costs based on hours.
+            </p>
+        </div>
+        <a class="btn btn-success btn-lg" asp-controller="Home" asp-action="Calculator">
+            Go to Calculator
+        </a>
+    </div>
+</section>

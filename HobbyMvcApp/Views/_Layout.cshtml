@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - Hobby Tutor</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="~/images/favicon.png" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+
+<header class="border-bottom mb-3">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                Hobby Tutor
+            </a>
+            <div class="navbar-nav">
+                <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="nav-link" asp-controller="Home" asp-action="Calculator">Calculator</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container pb-3">
+    @RenderBody()
+</main>
+
+<footer class="border-top text-muted mt-4">
+    <div class="container py-3">
+        &copy; @DateTime.Now.Year - Built by Hirohito Mizuno (IS 413 Mission #5)
+    </div>
+</footer>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+@RenderSection("Scripts", required: false)
+
+</body>
+</html>

@@ -6,4 +6,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Content Remove="wwwroot\images\hobby1.png" />
+      <Content Remove="wwwroot\images\hobby2.png" />
+      <Content Remove="wwwroot\images\lakers.png" />
+    </ItemGroup>
+
 </Project>
